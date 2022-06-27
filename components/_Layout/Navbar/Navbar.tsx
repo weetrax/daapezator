@@ -11,7 +11,16 @@ type NavbarProps = {
   //
 };
 
-const navigation = [{ name: "DaApezator", href: "/" }];
+const navigation = [
+  {
+    name: "DaApezator",
+    href: "/"
+  },
+  {
+    name: "Hot Items 🔥",
+    href: "#hot-items",
+  }
+];
 
 const Navbar: React.FC<NavbarProps> = () => {
   const router = useRouter();

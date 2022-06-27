@@ -6,6 +6,12 @@ import Screenshotable from '../components/Screenshotable';
 import { NFT } from '../types';
 import { useEditor } from '../hooks/useEditor';
 import type { NextPage } from "next";
+import Select from 'react-select';
+import Hat from '../public/assets/img/hat_fp.png';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+
 
 const Home: NextPage = () => {
   const { backgroundColor, setBackgroundColor, primaryColor, setPrimaryColor, secondaryColor, setSecondaryColor } = useEditor()
@@ -50,6 +56,11 @@ const Home: NextPage = () => {
     fetchDaApez();
   };
 
+  const options = [
+    { value: 'king', label: 'King' },
+    { value: 'goldrobocop', label: 'Gold RobotCop' },
+    { value: 'fishbowl', label: 'FishBowl' }
+  ]
   return (
     <>
       <Head>
@@ -108,6 +119,44 @@ const Home: NextPage = () => {
         ) : (
           <p className="text-white py-4">Loading...</p>
         )}
+      </Container>
+      <Container>
+        <div id="hot-items" className='my-8'>
+          <p className='block text-3xl mt-20 sm:text-4xl leading-none font-extrabold tracking-tight mb-10 text-white'> 🔥Hot Items🔥</p>
+          <div className="grid grid-cols-1">
+            <div className="col-span-1">
+              <div className="my-2">
+                <div className="flex flex-col items-start gap-4">
+                  <Carousel>
+                    <div>
+                      <img
+                        className="block w-auto"
+                        src="/assets/img/hat_fp.png"
+                        alt="hat FP"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        className="block w-auto"
+                        src="/assets/img/skin_fp.png"
+                        alt="clothes FP"
+                      />
+                    </div>   
+                    <div>
+                      <img
+                        className="block w-auto"
+                        src="/assets/img/clothes_fp.png"
+                        alt="clothes FP"
+                      />                      
+                    </div>                            
+                  </Carousel>
+                 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </>
   );
