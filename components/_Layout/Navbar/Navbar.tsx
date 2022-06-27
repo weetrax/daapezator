@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                           className={classNames(
                             router.pathname == item.href
                               ? "bg-primary-500 text-white"
-                              : "text-gray-700 hover:bg-primary-500 hover:text-white duration-200 ease-in-out transition",
+                              : "text-white hover:bg-primary-500 hover:text-white duration-200 ease-in-out transition",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={
