@@ -138,7 +138,7 @@ const Home: NextPage = () => {
                     <div>
                       <img
                         className="block w-auto"
-                        src="/assets/img/skin_fp.png"
+                        src="/assets/img/skins_fp.png"
                         alt="clothes FP"
                       />
                     </div>   
